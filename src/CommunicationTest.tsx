@@ -38,7 +38,6 @@ export function CommunicationTest() {
     role: "",
   });
 
-  const [participantId, setParticipantId] = useState<number | null>(null);
   const [assessmentId, setAssessmentId] = useState<number | null>(null);
 
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -113,7 +112,6 @@ export function CommunicationTest() {
         return;
       }
 
-      setParticipantId(p.id);
 
       const { data: a, error: aErr } = await supabase
         .from("communication_assessments")
